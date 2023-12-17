@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Grid</title>
+    <style>
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(16, 1fr);
+        gap: 2px;
+        width: 400px; /* Adjust the width as needed */
+        height: 400px; /* Adjust the height as needed */
+        margin: 0 auto;
+      }
+
+      .grid-item {
+        width: 100%;
+        padding-top: 100%;
+        background-color: blue;
+        border: 2px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container" id="grid-container"></div>
+    <br /><br />
+
+    <div>
+      <label>Enter Number of Rows:</label>
+      <input type="number" class="rowsInput" />
+      <br /><br />
+      <label>Enter Number of Columns:</label>
+      <input type="number" class="columnsInput" /><br />
+      <button onclick="createGrid()">Create Grid</button>
+      <br /><br />
+      <button onclick="resetGrid()">Reset Grid</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
